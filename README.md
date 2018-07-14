@@ -1,6 +1,7 @@
 gcd (Google Cloud DataStore)
 -
 
+[![CircleCI](https://circleci.com/gh/thepkg/gcd.svg?style=svg)](https://circleci.com/gh/thepkg/gcd)
 [![Go Report Card](https://goreportcard.com/badge/github.com/thepkg/gcd)](https://goreportcard.com/report/github.com/thepkg/gcd)
 [![godoc](https://godoc.org/github.com/thepkg/gcd?status.svg)](https://godoc.org/github.com/thepkg/gcd)
 
