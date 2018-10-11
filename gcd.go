@@ -44,3 +44,23 @@ func GetKeys(ctx context.Context, kind string) ([]*datastore.Key, error) {
 
 	return keys, nil
 }
+
+// MustPut wrapper for Put method which may panic.
+func MustPut(ctx context.Context, key *datastore.Key, src interface{}) *datastore.Key {
+	k, err := datastore.Put(ctx, key, src)
+	if err != nil {
+		panic("failed to perform datastore.Put: " + err.Error())
+	}
+
+	return k
+}
+
+// MustGetAll wrapper for GetAll method which may panic.
+func MustGetAll(ctx context.Context, query *datastore.Query, data interface{}) []*datastore.Key {
+	keys, err := query.GetAll(ctx, data)
+	if err != nil {
+		panic("failed to perform datastore.GetAll: " + err.Error())
+	}
+
+	return keys
+}
